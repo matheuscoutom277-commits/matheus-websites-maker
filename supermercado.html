@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado do Bairro | Ofertas e Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; padding: 20px 15px; max-width: 600px; margin: 0 auto; }
+        
+        .hero-mercado { 
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); 
+            color: #fff; 
+            text-align: center; 
+            padding: 35px 20px; 
+            border-radius: 12px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3); 
+        }
+        .hero-mercado i { font-size: 3rem; margin-bottom: 10px; }
+        
+        .btn-whats { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 8px; 
+            background-color: #25d366; 
+            color: #fff; 
+            padding: 14px 28px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            width: 100%; 
+            margin-top: 15px; 
+            box-shadow: 0 4px 10px rgba(37,211,102,0.3);
+        }
+
+        .card { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border: 1px solid #e2e8f0; 
+            margin-bottom: 15px; 
+        }
+
+        h2 { 
+            color: #0284c7; 
+            font-size: 1.2rem; 
+            margin-bottom: 15px; 
+            border-bottom: 2px solid #f1f5f9; 
+            padding-bottom: 5px; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .oferta-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 12px; 
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .oferta-item:last-child { border-bottom: none; margin-bottom: 0; }
+        
+        .nome-prod { font-weight: 600; font-size: 0.95rem; }
+        .detalhe-prod { font-size: 0.8rem; color: #64748b; }
+        .preco { color: #dc2626; font-weight: bold; font-size: 1.05rem; }
+
+        .info-entrega {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .voltar { text-align: center; margin-top: 25px; }
+        .voltar a { color: #64748b; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-mercado">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h1>Supermercado do Bairro</h1>
+        <p style="font-size:0.95rem; opacity:0.9;">Preço baixo e entrega rápida na sua porta!</p>
+        <a href="https://wa.me/14998496505?text=Olá,%20gostaria%20de%20fazer%20um%20pedido%20de%20compras!" target="_blank" class="btn-whats">
+            <i class="fa-brands fa-whatsapp"></i> Fazer Pedido no WhatsApp
+        </a>
+    </div>
+
+    <!-- Seção de Encarte / Ofertas da Semana -->
+    <div class="card">
+        <h2><i class="fa-solid fa-tag"></i> Ofertas Imperdíveis da Semana</h2>
+        
+        <div class="oferta-item">
+            <div>
+                <div class="nome-prod">Arroz Tipo 1 - 5kg</div>
+                <div class="detalhe-prod">Marca Recomendada</div>
+            </div>
+            <div class="preco">R$ 23,90</div>
+        </div>
+
+        <div class="oferta-item">
+            <div>
+                <div class="nome-prod">Óleo de Soja 900ml</div>
+                <div class="detalhe-prod">Limite de 5 un. por cliente</div>
+            </div>
+            <div class="preco">R$ 5,49</div>
+        </div>
+
+        <div class="oferta-item">
+            <div>
+                <div class="nome-prod">Leite Integral 1L</div>
+                <div class="detalhe-prod">Caixa com 12 unidades</div>
+            </div>
+            <div class="preco">R$ 4,29</div>
+        </div>
+
+        <div class="oferta-item">
+            <div>
+                <div class="nome-prod">Café Torrado e Moído 500g</div>
+                <div class="detalhe-prod">Vários sabores</div>
+            </div>
+            <div class="preco">R$ 14,90</div>
+        </div>
+    </div>
+
+    <!-- Informações de Entrega e Horários -->
+    <div class="card">
+        <h2><i class="fa-solid fa-truck-fast"></i> Informações de Delivery</h2>
+        <div class="info-entrega">
+            <i class="fa-solid fa-clock" style="color: #0284c7;"></i>
+            <span><strong>Segunda a Sábado:</strong> 08:00h às 20:00h</span>
+        </div>
+        <div class="info-entrega">
+            <i class="fa-solid fa-motorcycle" style="color: #0284c

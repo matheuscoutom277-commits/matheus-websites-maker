@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Master | Cardápio Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #fcf8f2; color: #333; padding: 20px 15px; max-width: 600px; margin: 0 auto; }
+        .hero-burger { background-color: #e53e3e; color: #fff; text-align: center; padding: 30px 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(229,62,62,0.3); }
+        .hero-burger i { font-size: 3rem; margin-bottom: 10px; }
+        .btn-whats { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #25d366; color: #fff; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; width: 100%; margin-top: 15px; }
+        .categoria { background: #fff; padding: 20px; border-radius: 10px; border: 1px solid #eee; margin-bottom: 15px; }
+        h2 { color: #c53030; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 2px solid #fff5f5; padding-bottom: 5px; }
+        .item { margin-bottom: 15px; }
+        .item-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 1rem; color: #2d3748; }
+        .item-desc { font-size: 0.85rem; color: #718096; margin-top: 3px; }
+        .preco { color: #e53e3e; }
+        .voltar { text-align: center; margin-top: 25px; }
+        .voltar a { color: #718096; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-burger">
+        <i class="fa-solid fa-burger"></i>
+        <h1>Burger Master</h1>
+        <p style="font-size:0.95rem; opacity:0.9;">Hambúrgueres Artesanais de Verdade</p>
+        <a href="https://wa.me/14998496505?text=Olá,%20quero%20fazer%20um%20pedido!" target="_blank" class="btn-whats">
+            <i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria">
+        <h2><i class="fa-solid fa-fire"></i> Hambúrgueres Artesanais</h2>
+        <div class="item">
+            <div class="item-header"><span>Classic Smash</span> <span class="preco">R$ 24,90</span></div>
+            <div class="item-desc">Pão brioche, burger 120g, queijo cheddar fatiado e maionese da casa.</div>
+        </div>
+        <div class="item">
+            <div class="item-header"><span>Bacon Blast</span> <span class="preco">R$ 31,90</span></div>
+            <div class="item-desc">Pão brioche, burger 160g, muito bacon crocante, cheddar e molho barbecue.</div>
+        </div>
+    </div>
+
+    <div class="categoria">
+        <h2><i class="fa-solid fa-bottle-water"></i> Bebidas</h2>
+        <div class="item">
+            <div class="item-header"><span>Coca-Cola Lata 350ml</span> <span class="preco">R$ 6,00</span></div>
+        </div>
+        <div class="item">
+            <div class="item-header"><span>Suco Natural de Laranja 500ml</span> <span class="preco">R$ 9,00</span></div>
+        </div>
+    </div>
+
+    <div class="voltar">
+        <a href="index.html">&larr; Voltar ao Portfólio de Matheus Couto</a>
+    </div>
+
+</body>
+</html>
