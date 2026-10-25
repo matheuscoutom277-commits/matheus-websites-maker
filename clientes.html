@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes - Matheus Websites</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f2f6;
+        }
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📋 Clientes Cadastrados no Sistema</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail / Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-clientes">
+                <!-- Os dados do MySQL vão aparecer aqui automaticamente via JavaScript -->
+            </tbody>
+        </table>
+
+        <a href="/" class="btn-voltar">← Voltar à página inicial</a>
+    </div>
+
+    <script>
+        // Função para ir buscar os dados ao nosso servidor Node.js
+        async function carregarClientes() {
+            try {
+                const resposta = await fetch('/clientes');
+                const clientes = await resposta.json();
+
+                const tbody = document.getElementById('tabela-clientes');
+                tbody.innerHTML = ''; // Limpa a tabela antes de preencher
+
+                // Passa por cada cliente vindo do MySQL e cria uma linha na tabela
+                clientes.forEach(cliente => {
+                    const linha = document.createElement('tr');
+                    linha.innerHTML = `
+                        <td>${cliente.id}</td>
+                        <td>${cliente.nome || 'Não informado'}</td>
+                        <td>${cliente.email || cliente.telefone || 'N/A'}</td>
+                    `;
+                    tbody.appendChild(linha);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar clientes:', error);
+            }
+        }
+
+        // Executar a função assim que a página abrir
+        carregarClientes();
+    </script>
+
+</body>
+</html>
+<div class="container">
+        <h1>📋 Clientes Cadastrados no Sistema</h1>
+
+        <!-- NOVO: Formulário de Cadastro -->
+        <form action="/clientes" method="POST" style="margin-bottom: 30px; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <h3>Adicionar Novo Cliente</h3>
+            <div style="margin-bottom: 10px;">
+                <label>Nome:</label><br>
+                <input type="text" name="nome" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label>E-mail:</label><br>
+                <input type="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <button type="submit" style="background: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Cadastrar Cliente</button>
+        </form>
+
+        <table>
+            <!-- O resto da tabela continua igual -->
+...
