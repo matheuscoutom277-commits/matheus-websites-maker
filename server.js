@@ -13,10 +13,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Conexão segura com o MySQL utilizando o .env
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  ssl: {
+    rejectUnauthorized: true
+  }
 });
 
 db.connect((err) => {
@@ -58,6 +61,9 @@ app.get('/clientes', (req, res) => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Painel de Clientes | Matheus Websites Maker</title>
+            <title>Painel de Clientes | Matheus Websites Maker</title>
+<link rel="manifest" href="/manifest.json">
+<style>
             <style>
                 * {
                     box-sizing: border-box;
