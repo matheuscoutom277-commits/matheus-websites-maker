@@ -8,13 +8,13 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/foto.jpg",
+      "src": "/uuuuuuuuuu.jpeg",
       "sizes": "192x192",
       "type": "image/jpg",
       "purpose": "any"
     },
     {
-      "src": "/foto.jpg",
+      "src": "/uuuuuuuuuu.jpeg",
       "sizes": "512x512",
       "type": "image/jpg",
       "purpose": "maskable"
