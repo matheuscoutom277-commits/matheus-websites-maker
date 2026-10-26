@@ -135,3 +135,10 @@ perguntas.forEach((pergunta) => {
         resposta.classList.toggle('ativa');
     });
 });
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('Service Worker registado com sucesso!', reg))
+      .catch(err => console.log('Erro ao registar o Service Worker:', err));
+  });
+}
