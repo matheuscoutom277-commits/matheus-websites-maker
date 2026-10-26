@@ -176,3 +176,8 @@ app.post('/clientes', (req, res) => {
 app.listen(PORTA, () => {
     console.log(`Servidor a rodar na porta ${PORTA}`);
 });
+const express = require('express');
+
+
+// Isto é fundamental para o Render e o navegador lerem o manifest e o sw.js
+app.use(express.static('public'));
