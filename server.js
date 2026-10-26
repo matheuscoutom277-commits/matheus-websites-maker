@@ -1,15 +1,16 @@
-require('dotenv').config();
 const express = require('express');
-const mysql = mysql2 = require('mysql2'); // ou const mysql = require('mysql2');
-
 const app = express();
+require('dotenv').config();
+const mysql = require('mysql2');
+
 const PORTA = process.env.PORT || 3000;
+
+// Essencial para o PWA e ficheiros estáticos funcionarem
+app.use(express.static(__dirname));
 
 // Middleware para ler dados do formulário
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname));
-
 // Conexão segura com o MySQL utilizando o .env
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -176,8 +177,6 @@ app.post('/clientes', (req, res) => {
 app.listen(PORTA, () => {
     console.log(`Servidor a rodar na porta ${PORTA}`);
 });
-const express = require('express');
 
 
-// Isto é fundamental para o Render e o navegador lerem o manifest e o sw.js
-app.use(express.static('public'));
+
