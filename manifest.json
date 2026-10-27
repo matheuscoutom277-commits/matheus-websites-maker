@@ -3,20 +3,21 @@
   "name": "Matheus Websites Maker",
   "id": "/",
   "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
-  "display": "standalone",
   "icons": [
     {
       "src": "/uuuuuuuuuu.jpeg",
       "sizes": "192x192",
-      "type": "image/jpg",
+      "type": "image/jpeg",
       "purpose": "any"
     },
     {
       "src": "/uuuuuuuuuu.jpeg",
       "sizes": "512x512",
-      "type": "image/jpg",
+      "type": "image/jpeg",
       "purpose": "maskable"
     }
   ]
