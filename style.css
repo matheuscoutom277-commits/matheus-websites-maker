@@ -708,71 +708,7 @@ body.dark-mode .badge-orcamento-livre {
     }
 }
 
-.calculator-box {
-    text-align: left;
-    padding: 30px;
-}
 
-.calc-group {
-    margin: 15px 0;
-}
-
-.calc-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #334155;
-}
-
-.calc-group select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    font-size: 1rem;
-    background-color: #fff;
-}
-
-.calc-group.checkboxes label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.calc-result {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f1f5f9;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    margin-top: 20px;
-}
-
-.calc-result strong {
-    color: #16a34a;
-    font-size: 1.6rem;
-}
-
-/* Suporte ao Modo Escuro para os Planos e Calculadora */
-body.dark-mode .plan-card ul li,
-body.dark-mode .calc-group label {
-    color: #cbd5e1 !important;
-}
-
-body.dark-mode .calc-group select {
-    background-color: #1e293b !important;
-    color: #f1f5f9 !important;
-    border-color: #334155 !important;
-}
-
-body.dark-mode .calc-result {
-    background-color: #0f172a !important;
-    border: 1px solid #334155 !important;
-}
 /* Estilo para a foto real no topo */
 .hero-avatar-foto {
     width: 110px;
